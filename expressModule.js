@@ -26,7 +26,7 @@ mongoose.connect('mongodb://localhost:27017/local', { useNewUrlParser:  true, us
 
 // 노드에서 안드로이드로 이미지 전송할때에는  multer이라는 모듈을 사용함... 
 // post방식으로 사진 전송....! 
-// 근데 mongodb 에 사진 받아서 전송은 불가능한건가... 아 ㅅㅄ
+// 근데 mongodb 에 사진 받아서 전송은 불가능한건가..?
 // db에 과부하가 걸리기때문에 관련경로같은 정보들만 저장하고 
 //서버에 파일시스템을 만들어서 저장함 
 // ㅇㅅㅇ....? 
@@ -186,7 +186,7 @@ function getCount(data) {
 
 
 function forDB(data){
-    console.log('시발왜시작안해' + data);
+    console.log('' + data);
    
                 var numb = data + 10;
 
@@ -194,8 +194,8 @@ function forDB(data){
                      {"name": "exhibit1"}, 
                      { $set: { "count": numb }
         }, function(err, results) {
-            console.log("시발테스브1ㅂ" + results.result);
-            console.log("서버ㅓ버버ㅓ법"+err);
+            console.log("결과" + results.result);
+            console.log("오류"+err);
         });
     
         
